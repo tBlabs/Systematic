@@ -1,0 +1,78 @@
+.box {
+    margin-top: 16px;
+    width: 100%;
+    /* height: 50px; */
+    display: grid;
+    grid-template-columns: 3fr;
+    grid-template-rows: 2fr;
+    grid-gap: 6px;
+    font-family: "Courier New";
+    /* background-color: rgb(49, 9, 28); */
+}
+.box .progress-bar
+{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    /* color: #ddd; */
+    /* background-color: blue; */
+}
+.box .title
+{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    color: #bbb;
+    font-size: 18px;
+    /* background-color: red; */
+}
+.box .time
+{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: #bbb;
+    font-size: 18px;
+    /* background-color: purple; */
+}
+.box .buttons
+{
+    grid-column: 3/4;
+    grid-row: 1/3;
+    /* background-color: rosybrown; */
+}
+button.button2
+{
+    margin: 0;
+    display: inline-block;
+    padding: 12px 12px;
+    /* width: 50px; */
+    /* height: 32px; */
+    /* margin-top: 4px; */
+    border: 0;
+    min-width: 48px;
+    background-color: darkgreen;
+    text-align: center;
+    vertical-align: middle;
+    color: #111;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+.button2 + .button2
+{
+    margin-left: 6px;
+}
+.progress-background {
+    width: 100%;
+    background-color: darkgreen;
+    xheight: 18px;
+}
+input, select
+{
+    background-color: #222;
+    color: #eee;
+    padding: 12px;
+}
+.progress {
+    xwidth: 35%;
+    background-color: #222;
+    height: 18px;
+}

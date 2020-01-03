@@ -1,0 +1,36 @@
+.tasks
+{
+    padding: 18px;
+    font-family: "Courier New";
+    color: #222;
+}
+
+.clock
+{
+    margin: 0;
+    margin-bottom: 12px;
+    text-align: left;
+    /* height: 32px;  */
+    /* width: 100%; */
+    font-size: 18px;
+    color: #bbb;
+    display: inline-block;
+    padding: 8px 32px; 
+    background-color: #222;
+    font-weight: bold;
+}
+
+.clock-big
+{
+    position: absolute;
+    bottom: -45px;
+    right: 130px;
+    font-size: 162px;
+    color: #111;
+
+}
+
+a
+{
+    color: #444;
+}
