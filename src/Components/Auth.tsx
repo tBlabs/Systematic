@@ -74,7 +74,7 @@ export class Auth<T> extends React.Component<IProps<T>, IState>
 
         this.setState({ status: "Trying to login..." });
 
-        const response = await fetch("http://auth.tblabs.pl", { method: "POST", body: JSON.stringify(credentials) });
+        const response = await fetch(process.env.AUTH!, { method: "POST", body: JSON.stringify(credentials) });
 
         if (response.status === 200)
         {

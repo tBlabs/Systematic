@@ -19,7 +19,7 @@ interface IState
 {
   date: string;
   tasks: Task[];
-  addTaskPopupVisability: boolean;
+  addTaskPopupVisibility: boolean;
   openEditPopup: boolean;
   isAuthorized: boolean;
   timeToRefresh: string;
@@ -31,7 +31,7 @@ export class App extends React.Component<{}, IState>
 
   state = {
     date: moment().format("D-M-Y"),
-    addTaskPopupVisability: false,
+    addTaskPopupVisibility: false,
     openEditPopup: false,
     tasks: [],
     isAuthorized: false,
@@ -87,10 +87,10 @@ export class App extends React.Component<{}, IState>
 
         <div className="actions" style={{ marginTop: "18px" }}>
           <Button label="[ + ]"
-            onClick={() => this.ToggleAddTaskPopupVisability()} />
+            onClick={() => this.ToggleAddTaskPopupVisibility()} />
         </div>
 
-        {this.state.addTaskPopupVisability && this.AddTaskPopup()}
+        {this.state.addTaskPopupVisibility && this.AddTaskPopup()}
 
         {this.state.openEditPopup && this.EditTaskPopup()}
 
@@ -181,7 +181,7 @@ export class App extends React.Component<{}, IState>
 
   private AddTaskPopup(): React.ReactNode
   {
-    const CloseAddTaskPopup = () => this.setState({ addTaskPopupVisability: false });
+    const CloseAddTaskPopup = () => this.setState({ addTaskPopupVisibility: false });
 
     return <Popup title="➕ Add new Task"
       onCancel={() => CloseAddTaskPopup()}>
@@ -193,9 +193,9 @@ export class App extends React.Component<{}, IState>
     </Popup>;
   }
 
-  private ToggleAddTaskPopupVisability(): void
+  private ToggleAddTaskPopupVisibility(): void
   {
-    return this.setState({ addTaskPopupVisability: !this.state.addTaskPopupVisability });
+    return this.setState({ addTaskPopupVisibility: !this.state.addTaskPopupVisibility });
   }
 
   async UpdateTask(task: Task): Promise<void>

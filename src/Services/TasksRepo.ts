@@ -20,7 +20,7 @@ export class TasksRepo
 
     public Init(storageId: string): void
     {
-        this.storageAddr = "http://storage.tblabs.pl/" + storageId;
+        this.storageAddr = process.env.STORAGE! + "/" + storageId;
     }
     
     public async Add(task: Task)
