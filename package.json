@@ -9,7 +9,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "zip:win": "del /F dist.zip && @powershell Compress-Archive -Path ./dist/* -DestinationPath dist.zip",
-    "push": "curl -X POST -F file=@dist.zip http://deploy.tblabs.pl/systematic",
+    "push": "curl -X POST -F file=@dist.zip http://deploy.specteam.pl/systematic",
     "deploy:win": "npm run build && npm run zip:win && npm run push"
   },
   "jest": {
